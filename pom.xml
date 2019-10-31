@@ -24,6 +24,7 @@
 		<module>com.feng.wechat</module>
 		<module>com.feng.http</module>
 		<module>com.feng.sportsone</module>
+		<module>com.feng.main</module>
 	</modules>
 	<dependencies>
 
