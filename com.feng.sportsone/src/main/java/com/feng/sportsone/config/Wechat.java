@@ -1,0 +1,13 @@
+package com.feng.sportsone.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Wechat {
+    @Value("${wechat.appid}")
+    public String Appid;
+
+    @Value("${wechat.appsecret}")
+    public String Appsecret;
+}

@@ -1,10 +1,10 @@
 spring:
   application:
-    name: wechat-service
+    name: sportsone-service
   main:
     banner-mode: "off"
   profiles:
-    active: "wechat"
+    active: "sportsone"
 http:
   maxTotal: 20
   defaultMaxPerRoute: 5
@@ -22,6 +22,6 @@ sportsone:
     xs-username: SAP_SPORTS_SGAS_SERVICE
     xs-password: Welcome1
 server:
-  port: 8086
+  port: 8088
   servlet:
     context-path: /

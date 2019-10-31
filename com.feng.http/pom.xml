@@ -3,7 +3,6 @@
   <groupId>com.feng</groupId>
   <artifactId>com.feng.http</artifactId>
   <version>${version}</version>
-  <name>com.feng.http</name>
   <properties>
     <httpclient-version>4.5.10</httpclient-version>
     <httpmime-version>4.5.10</httpmime-version>
@@ -36,15 +35,5 @@
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
     <finalName>${artifactId}-${version}</finalName>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
-        <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
 </project>

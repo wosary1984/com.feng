@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/httpclient")
 public class HttpClientController extends BaseController {
 
     @Resource
     private HttpApiService http;
 
-    @RequestMapping("httpclient-test")
+    @RequestMapping("/test")
     public HttpResult test() throws Exception {
         HttpResult r = http.doGet("http://www.baidu.com", null);
         return r;

@@ -20,6 +20,7 @@ import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
+@RequestMapping("/wechat")
 public class WechatController extends BaseController {
 
     @Resource

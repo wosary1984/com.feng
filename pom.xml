@@ -23,6 +23,7 @@
 	<modules>
 		<module>com.feng.wechat</module>
 		<module>com.feng.http</module>
+		<module>com.feng.sportsone</module>
 	</modules>
 	<dependencies>
 
