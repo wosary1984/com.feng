@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sgas-s1-service-conn
+  main:
+    banner-mode: "off"
+  profiles:
+    active: "wechat"
+http:
+  maxTotal: 20
+  defaultMaxPerRoute: 5
+  connectTimeout: 1000
+  connectionRequestTimeout: 500
+  socketTimeout: 10000
+  staleConnectionCheckEnabled: true
+#bruce test wechat
+wechat:
+  appid: wx6c4a3e5b36a2c67c
+  appsecret: 68a85a595fa0e81e121f0dfe53212afd
+sportsone:
+  s1-dev:
+    host: https://s1-dev.bsu.edu.cn
+    xs-username: SAP_SPORTS_SGAS_SERVICE
+    xs-password: Welcome1
+server:
+  port: 8086
+  servlet:
+    context-path: /

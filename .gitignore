@@ -1,3 +1,7 @@
 /.settings/
 /xs-syncer.log
 /.DS_Store
+/.vscode/
+com.feng.main/xs-syncer.log
+com.feng.main/src/main/resources/.DS_Store
+com.feng.wechat/src/main/resources/.DS_Store
