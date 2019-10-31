@@ -21,6 +21,14 @@ sportsone:
     host: https://s1-dev.bsu.edu.cn
     xs-username: SAP_SPORTS_SGAS_SERVICE
     xs-password: Welcome1
+swagger2:
+  title: Application Rest API Doc
+  desc: Application Rest API Doc
+  contact: 
+    name: Feng
+    url: 
+    email: 273630150@qq.com
+  version: 1.0.0
 server:
   port: 8081
   servlet:
