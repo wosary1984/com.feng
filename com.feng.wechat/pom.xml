@@ -9,8 +9,8 @@
   <parent>
     <groupId>com.feng</groupId>
     <artifactId>com.feng</artifactId>
-    <!-- <version>0.0.1</version> -->
-    <version>${version}</version>
+    <version>0.0.1</version>
+    <!-- <version>${version}</version> -->
   </parent>
   <dependencies>
     <!-- http module -->
@@ -24,23 +24,6 @@
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
     <finalName>${project.artifactId}-${version}</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <fork>true</fork>
-          <skip>false</skip>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
   </build>
 
 </project>
