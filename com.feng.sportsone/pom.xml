@@ -6,7 +6,8 @@
   <parent>
     <groupId>com.feng</groupId>
     <artifactId>com.feng</artifactId>
-    <version>0.0.1</version>
+    <!-- <version>0.0.1</version> -->
+    <version>${version}</version>
   </parent>
   <dependencies>
     <!-- http module -->
