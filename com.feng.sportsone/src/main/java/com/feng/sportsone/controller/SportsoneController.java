@@ -2,7 +2,7 @@ package com.feng.sportsone.controller;
 
 import javax.annotation.Resource;
 
-import com.feng.controller.BaseController;
+import com.feng.http.controller.BaseController;
 import com.feng.http.service.common.HttpApiService;
 import com.feng.sportsone.service.SportsOneLoginService;
 

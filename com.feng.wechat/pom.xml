@@ -2,11 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.feng</groupId>
   <artifactId>com.feng.wechat</artifactId>
-  <version>${version}</version>
+  <!-- <version>${version}</version> -->
+  <properties>
+    <start-class>com.feng.WechatMainApplication</start-class>
+  </properties>
   <parent>
     <groupId>com.feng</groupId>
     <artifactId>com.feng</artifactId>
-    <version>${version}</version>
+    <version>0.0.1</version>
   </parent>
   <dependencies>
     <!-- http module -->
@@ -19,7 +22,24 @@
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
-    <finalName>${artifactId}-${version}</finalName>
+    <finalName>${project.artifactId}-${version}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
+          <skip>false</skip>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 
 </project>

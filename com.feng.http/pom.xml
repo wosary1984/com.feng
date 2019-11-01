@@ -2,8 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.feng</groupId>
   <artifactId>com.feng.http</artifactId>
-  <version>${version}</version>
+  <!-- <version>${version}</version> -->
   <properties>
+    <start-class>com.feng.HttpMainApplication</start-class>
     <httpclient-version>4.5.10</httpclient-version>
     <httpmime-version>4.5.10</httpmime-version>
     <httpcore-version>4.4.12</httpcore-version>
@@ -11,7 +12,7 @@
   <parent>
     <groupId>com.feng</groupId>
     <artifactId>com.feng</artifactId>
-    <version>${version}</version>
+    <version>0.0.1</version>
   </parent>
   <dependencies>
     <dependency>
@@ -34,6 +35,6 @@
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/java</testSourceDirectory>
-    <finalName>${artifactId}-${version}</finalName>
+    <finalName>${project.artifactId}-${version}</finalName>
   </build>
 </project>

@@ -1,4 +1,4 @@
-package com.feng.controller;
+package com.feng.http.controller;
 
 import javax.annotation.Resource;
 

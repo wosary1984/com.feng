@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.feng.controller.BaseController;
+import com.feng.http.controller.BaseController;
 import com.feng.http.service.common.HttpApiService;
 import com.feng.wechat.service.wechat.WechatService;
 import com.feng.wechat.service.wechat.model.WechatCustomMessageType;
