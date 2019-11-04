@@ -3,7 +3,7 @@
   <groupId>com.feng</groupId>
   <artifactId>com.feng.main</artifactId>
   <!-- <version>${version}</version> -->
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <properties>
 		<start-class>com.feng.MainApplication</start-class>
 	</properties>

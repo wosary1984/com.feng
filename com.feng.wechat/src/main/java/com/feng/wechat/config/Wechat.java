@@ -10,4 +10,7 @@ public class Wechat {
 
     @Value("${wechat.appsecret}")
     public String Appsecret;
+
+    @Value("${wechat.in_token}")
+    public String in_token;
 }

@@ -16,6 +16,7 @@ http:
 wechat:
   appid: wx6c4a3e5b36a2c67c
   appsecret: 68a85a595fa0e81e121f0dfe53212afd
+  in_token: Feng
 sportsone:
   s1-dev:
     host: https://s1-dev.bsu.edu.cn
