@@ -11,8 +11,12 @@ com.feng.sportsone/xs-syncer.log
 com.feng.sportsone/src/.DS_Store
 com.feng.sportsone/src/main/resources/.DS_Store
 com.feng.sportsone/src/test/.DS_Store
-com.feng.sportsone/logs/log_info.log
+com.feng.sportsone/logs/
 com.feng.main/.DS_Store
-com.feng.main/.DS_Store
-com.feng.main/.DS_Store
+com.feng.security/logs/
+com.feng.security/target/
+com.feng.security/.vscode/
+com.feng.security/xs-syncer.log
+com.feng.security/.settings/
+com.feng.security/src/main/resources/.DS_Store
 com.feng.main/.DS_Store

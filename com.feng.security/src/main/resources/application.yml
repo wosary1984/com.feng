@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: security-service
+  main:
+    banner-mode: "off"
+  profiles:
+    active: "security"
+server:
+  port: 8089
+  servlet:
+    context-path: /
