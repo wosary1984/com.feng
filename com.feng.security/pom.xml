@@ -16,7 +16,16 @@
     <!-- <version>${version}</version> -->
   </parent>
   <dependencies>
-    
+    <dependency>
+      <groupId>com.feng</groupId>
+      <artifactId>com.feng.http</artifactId>
+      <version>${version}</version>
+    </dependency>
+    <!-- Spring Security -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>

@@ -12,6 +12,9 @@ import org.springframework.http.MediaType;
 
 public abstract class BaseController {
 	protected static final String MEDIA_TYPE = MediaType.APPLICATION_JSON_UTF8_VALUE;
+	protected static final String ACTION_LOGIN = "Login";
+	protected static final String ACTION_LOGOUT = "Logout";
+	protected static final String ACTION_ACCESS = "Access";
 	protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	public BaseController() {

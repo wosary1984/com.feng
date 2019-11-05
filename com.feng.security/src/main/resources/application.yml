@@ -5,6 +5,13 @@ spring:
     banner-mode: "off"
   profiles:
     active: "security"
+http:
+  maxTotal: 20
+  defaultMaxPerRoute: 5
+  connectTimeout: 1000
+  connectionRequestTimeout: 500
+  socketTimeout: 10000
+  staleConnectionCheckEnabled: true
 server:
   port: 8089
   servlet:
