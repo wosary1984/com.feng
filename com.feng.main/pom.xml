@@ -27,6 +27,13 @@
       <version>${version}</version>
     </dependency>
 
+    <!-- http sportsone -->
+    <dependency>
+      <groupId>com.feng</groupId>
+      <artifactId>com.feng.security</artifactId>
+      <version>${version}</version>
+    </dependency>
+
   </dependencies>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>

@@ -9,15 +9,15 @@ import org.springframework.context.annotation.Profile;
 
 @Profile("security")
 @SpringBootApplication
-public class MainApplication extends SpringBootServletInitializer {
+public class SecurityMainApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MainApplication.class, args);
+		SpringApplication.run(SecurityMainApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(MainApplication.class);
+		return application.sources(SecurityMainApplication.class);
 	}
 
 }

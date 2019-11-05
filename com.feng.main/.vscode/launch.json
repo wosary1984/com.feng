@@ -6,7 +6,7 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)-main",
+            "name": "main",
             "request": "launch",
             "mainClass": "com.feng.MainApplication"
         }
