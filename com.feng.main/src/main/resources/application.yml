@@ -31,6 +31,6 @@ swagger2:
     email: 273630150@qq.com
   version: 1.0.0
 server:
-  port: 80
+  port: 8090
   servlet:
     context-path: /
