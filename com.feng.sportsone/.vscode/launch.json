@@ -6,7 +6,7 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch) - Sportsone",
+            "name": "sportsone",
             "request": "launch",
             "mainClass": "com.feng.SportsMainApplication"
         }

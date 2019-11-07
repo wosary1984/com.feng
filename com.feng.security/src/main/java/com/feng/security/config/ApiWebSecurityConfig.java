@@ -12,8 +12,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import com.feng.security.service.CustomUserService;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +32,7 @@ import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
+import com.feng.security.service.CustomUserService;
 
 @EnableWebSecurity
 public class ApiWebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -85,35 +84,35 @@ public class ApiWebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/my/session").permitAll().antMatchers("/api/**").authenticated()
 				.requestMatchers(CorsUtils::isPreFlightRequest).permitAll();
 
-		 // this will ignore only h2-console csrf, spring security 4+
-		 http.csrf().ignoringAntMatchers("/h2-console/**");
-		 //this will allow frames with same origin which is much more safe
-		 http.headers().frameOptions().sameOrigin();
+		// this will ignore only h2-console csrf, spring security 4+
+		http.csrf().ignoringAntMatchers("/h2-console/**");
+		// this will allow frames with same origin which is much more safe
+		http.headers().frameOptions().sameOrigin();
 
 		http.formLogin();
 
 		http.logout().logoutRequestMatcher(new AntPathRequestMatcher(logout))
-				// 登出前调用，可用于日志
+				// executed before logout
 				.addLogoutHandler(customLogoutHandler)
-				// 登出后调用，用户信息已不存在
+				// executed after logout
 				.logoutSuccessHandler(customLogoutHandler);
 
 		http.exceptionHandling()
-				// 已登入用户的权限错误
+				// login user authtication error
 				.accessDeniedHandler(customAccessDeniedHandler)
-				// 未登入用户的权限错误
+				// anonymous user authication error
 				.authenticationEntryPoint(customAccessDeniedHandler);
 
-		http.csrf()
-				// 登入API不启用CSFR检查
-				.ignoringAntMatchers("/api/session/**");
+		// ignore login csrf token check
+		// ignore wechat in token check
+		http.csrf().ignoringAntMatchers("/api/session/**", "/wechat/**");
 
 		http.addFilterBefore(new AcceptHeaderLocaleFilter(), UsernamePasswordAuthenticationFilter.class);
 
-		// 替换原先的表单登入 Filter
+		// replace default login form filter
 		http.addFilterAt(customAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
-		// 绑定 CSRF TOKEN 到响应的 HEADER 上
+		// bind csrf token to response header
 		http.addFilterAfter(new CsrfTokenResponseHeaderBindingFilter(), CsrfFilter.class);
 
 		// 拦截所有的请求进行定制的授权验证

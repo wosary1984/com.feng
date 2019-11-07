@@ -34,7 +34,8 @@ public class WechatAccess {
     public String WechatIn(@RequestParam(name = "signature") String signature,
             @RequestParam(name = "timestamp") String timestamp, @RequestParam(name = "nonce") String nonce,
             @RequestParam(name = "echostr") String echostr) throws Exception {
-        logger.info("wechat in:{}", request.getRequestURI());
+        logger.info("wechat in:{},signature:{},timestamp:{},nonce:{},echostr:{}", request.getRequestURI(), signature,
+                timestamp, nonce, echostr);
         if (checkSignature(signature, wechat.in_token, timestamp, nonce)) {
             return echostr;
         } else
@@ -55,12 +56,14 @@ public class WechatAccess {
         p.add(nonce);
         p = p.stream().sorted().collect(Collectors.toList());
 
-        String str = null;
+        String str = "";
         for (String v : p) {
-            System.out.print(v);
-            str = str + v;
+            logger.info("{}", v);
+            str = str.concat(v);
         }
-        if (SHA1.sha1Encode2(str) == signature)
+
+        logger.info("encode str:{}", str);
+        if (SHA1.sha1Encode2(str).equals(signature))
             return true;
         else
             return false;
